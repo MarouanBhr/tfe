@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation - Gym Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>💪 Gym Master</h1>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="cours.html">Cours</a></li>
+                <li><a href="tarifs.html">Tarifs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Connexion</a></li>
+                <li><a href="registrer.html" class="btn-register">Inscription</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Réserver un Cours</h1>
+        <p>Choisissez votre cours et réservez votre place</p>
+    </section>
+
+    <!-- Reservation Section -->
+    <section class="reservation-section">
+        <div class="container">
+            <div class="reservation-grid">
+                
+                <!-- Formulaire de Réservation -->
+                <div class="reservation-form-container">
+                    <h2>📅 Réservez Votre Place</h2>
+                    <form action="reservation_process.php" method="POST" id="reservationForm">
+                        
+                        <!-- Sélection du cours -->
+                        <div class="form-group">
+                            <label for="cours">🏋️ Choisir un cours *</label>
+                            <select id="cours" name="cours" required onchange="updateHoraires()">
+                                <option value="">-- Sélectionnez un cours --</option>
+                                <option value="yoga">🧘 Yoga</option>
+                                <option value="musculation">🏋️ Musculation</option>
+                                <option value="cardio">🏃 Cardio Training</option>
+                                <option value="pilates">🤸 Pilates</option>
+                                <option value="boxing">🥊 Boxing</option>
+                                <option value="zumba">💃 Zumba</option>
+                            </select>
+                        </div>
+
+                        <!-- Sélection de la date -->
+                        <div class="form-group">
+                            <label for="date">📆 Date du cours *</label>
+                            <input 
+                                type="date" 
+                                id="date" 
+                                name="date" 
+                                required
+                                min="<?php echo date('Y-m-d'); ?>"
+                            >
+                        </div>
+
+                        <!-- Sélection de l'horaire -->
+                        <div class="form-group">
+                            <label for="horaire">🕐 Horaire *</label>
+                            <select id="horaire" name="horaire" required>
+                                <option value="">-- Choisissez d'abord un cours --</option>
+                            </select>
+                        </div>
+
+                        <!-- Nom -->
+                        <div class="form-group">
+                            <label for="nom">👤 Nom complet *</label>
+                            <input 
+                                type="text" 
+                                id="nom" 
+                                name="nom" 
+                                placeholder="Votre nom et prénom" 
+                                required
+                            >
+                        </div>
+
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email">📧 Email *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="votre.email@exemple.com" 
+                                required
+                            >
+                        </div>
+
+                        <!-- Téléphone -->
+                        <div class="form-group">
+                            <label for="telephone">📞 Téléphone *</label>
+                            <input 
+                                type="tel" 
+                                id="telephone" 
+                                name="telephone" 
+                                placeholder="+32 XXX XX XX XX" 
+                                required
+                            >
+                        </div>
+
+                        <!-- Niveau -->
+                        <div class="form-group">
+                            <label for="niveau">📊 Votre niveau</label>
+                            <select id="niveau" name="niveau">
+                                <option value="debutant">Débutant</option>
+                                <option value="intermediaire">Intermédiaire</option>
+                                <option value="avance">Avancé</option>
+                            </select>
+                        </div>
+
+                        <!-- Commentaires -->
+                        <div class="form-group">
+                            <label for="commentaire">💬 Commentaire (optionnel)</label>
+                            <textarea 
+                                id="commentaire" 
+                                name="commentaire" 
+                                rows="4" 
+                                placeholder="Questions ou besoins particuliers..."
+                            ></textarea>
+                        </div>
+
+                        <!-- Conditions -->
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="conditions" required>
+                                <span>J'accepte les <a href="#">conditions de réservation</a></span>
+                            </label>
+                        </div>
+
+                        <!-- Message de confirmation -->
+                        <div class="success-message" id="successMessage" style="display: none;">
+                            ✅ Réservation confirmée ! Vous recevrez un email de confirmation.
+                        </div>
+
+                        <!-- Bouton de soumission -->
+                        <button type="submit" class="btn-submit">Confirmer la Réservation</button>
+                    </form>
+                </div>
+
+                <!-- Planning des Cours -->
+                <div class="planning-container">
+                    <h2>📋 Planning de la Semaine</h2>
+                    
+                    <div class="planning-card">
+                        <h3>Lundi</h3>
+                        <div class="planning-item">
+                            <span class="time">18h00 - 19h00</span>
+                            <span class="course">🧘 Yoga</span>
+                            <span class="places">8 places</span>
+                        </div>
+                        <div class="planning-item">
+                            <span class="time">20h00 - 21h00</span>
+                            <span class="course">🥊 Boxing</span>
+                            <span class="places">12 places</span>
+                        </div>
+                    </div>
+
+                    <div class="planning-card">
+                        <h3>Mardi</h3>
+                        <div class="planning-item">
+                            <span class="time">17h00 - 18h30</span>
+                            <span class="course">🏋️ Musculation</span>
+                            <span class="places">15 places</span>
+                        </div>
+                        <div class="planning-item">
+                            <span class="time">18h30 - 19h30</span>
+                            <span class="course">🤸 Pilates</span>
+                            <span class="places">10 places</span>
+                        </div>
+                        <div class="planning-item">
+                            <span class="time">19h00 - 20h00</span>
+                            <span class="course">💃 Zumba</span>
+                            <span class="places">20 places</span>
+                        </div>
+                    </div>
+
+                    <div class="planning-card">
+                        <h3>Mercredi</h3>
+                        <div class="planning-item">
+                            <span class="time">18h00 - 19h00</span>
+                            <span class="course">🧘 Yoga</span>
+                            <span class="places">8 places</span>
+                        </div>
+                        <div class="planning-item">
+                            <span class="time">19h00 - 20h00</span>
+                            <span class="course">🏃 Cardio</span>
+                            <span class="places">12 places</span>
+                        </div>
+                        <div class="planning-item">
+                            <span class="time">20h00 - 21h00</span>
+                            <span class="course">🥊 Boxing</span>
+                            <span class="places">12 places</span>
+                        </div>
+                    </div>
+
+                    <div class="planning-card">
+                        <h3>Jeudi</h3>
+                        <div class="planning-item">
+                            <span class="time">17h00 - 18h30</span>
+                            <span class="course">🏋️ Musculation</span>
+                            <span class="places">15 places</span>
+                        </div>
+                        <div class="planning-item">
+                            <span class="time">18h00 - 19h00</span>
+                            <span class="course">💃 Zumba</span>
+                            <span class="places">20 places</span>
+                        </div>
+                        <div class="planning-item">
+                            <span class="time">18h30 - 19h30</span>
+                            <span class="course">🤸 Pilates</span>
+                            <span class="places">10 places</span>
+                        </div>
+                    </div>
+
+                    <div class="planning-card">
+                        <h3>Vendredi</h3>
+                        <div class="planning-item">
+                            <span class="time">18h00 - 19h00</span>
+                            <span class="course">🥊 Boxing</span>
+                            <span class="places">12 places</span>
+                        </div>
+                        <div class="planning-item">
+                            <span class="time">19h00 - 20h00</span>
+                            <span class="course">🏃 Cardio</span>
+                            <span class="places">12 places</span>
+                        </div>
+                        <div class="planning-item">
+                            <span class="time">19h00 - 20h30</span>
+                            <span class="course">🏋️ Musculation</span>
+                            <span class="places">15 places</span>
+                        </div>
+                    </div>
+
+                    <div class="planning-card">
+                        <h3>Samedi</h3>
+                        <div class="planning-item">
+                            <span class="time">9h00 - 10h00</span>
+                            <span class="course">🏃 Cardio</span>
+                            <span class="places">12 places</span>
+                        </div>
+                        <div class="planning-item">
+                            <span class="time">10h00 - 11h00</span>
+                            <span class="course">🤸 Pilates</span>
+                            <span class="places">10 places</span>
+                        </div>
+                        <div class="planning-item">
+                            <span class="time">10h00 - 11h30</span>
+                            <span class="course">🧘 Yoga</span>
+                            <span class="places">8 places</span>
+                        </div>
+                    </div>
+
+                    <div class="planning-card">
+                        <h3>Dimanche</h3>
+                        <div class="planning-item">
+                            <span class="time">11h00 - 12h00</span>
+                            <span class="course">💃 Zumba</span>
+                            <span class="places">20 places</span>
+                        </div>
+                    </div>
+
+                    <div class="info-box">
+                        <h4>ℹ️ Informations Importantes</h4>
+                        <ul>
+                            <li>✓ Annulation gratuite jusqu'à 24h avant</li>
+                            <li>✓ Confirmez votre présence 15 min avant</li>
+                            <li>✓ Apportez votre serviette et bouteille d'eau</li>
+                            <li>✓ Premier cours gratuit pour nouveaux membres</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Gym Master</h3>
+                    <p>Votre partenaire fitness depuis 2026</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="cours.html">Cours</a></li>
+                        <li><a href="tarifs.html">Tarifs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📧 contact@gymmaster.be</p>
+                    <p>📞 +32 2 123 45 67</p>
+                    <p>📍 Avenue Louise 123, 1050 Bruxelles</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Horaires</h3>
+                    <p>Lun - Ven: 6h - 23h</p>
+                    <p>Sam - Dim: 8h - 21h</p>
+                    <p>Jours fériés: 9h - 18h</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gym Master - Tous droits réservés | TFE Projet</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Fonction pour mettre à jour les horaires selon le cours choisi
+        function updateHoraires() {
+            const cours = document.getElementById('cours').value;
+            const horaireSelect = document.getElementById('horaire');
+            
+            // Vider les options
+            horaireSelect.innerHTML = '<option value="">-- Sélectionnez un horaire --</option>';
+            
+            // Définir les horaires pour chaque cours
+            const horaires = {
+                'yoga': [
+                    'Lundi 18h00 - 19h00',
+                    'Mercredi 18h00 - 19h00',
+                    'Samedi 10h00 - 11h30'
+                ],
+                'musculation': [
+                    'Mardi 17h00 - 18h30',
+                    'Jeudi 17h00 - 18h30',
+                    'Vendredi 19h00 - 20h30'
+                ],
+                'cardio': [
+                    'Mercredi 19h00 - 20h00',
+                    'Vendredi 19h00 - 20h00',
+                    'Samedi 9h00 - 10h00'
+                ],
+                'pilates': [
+                    'Mardi 18h30 - 19h30',
+                    'Jeudi 18h30 - 19h30',
+                    'Samedi 10h00 - 11h00'
+                ],
+                'boxing': [
+                    'Lundi 20h00 - 21h00',
+                    'Mercredi 20h00 - 21h00',
+                    'Vendredi 18h00 - 19h00'
+                ],
+                'zumba': [
+                    'Mardi 19h00 - 20h00',
+                    'Jeudi 18h00 - 19h00',
+                    'Dimanche 11h00 - 12h00'
+                ]
+            };
+            
+            // Ajouter les horaires correspondants
+            if (cours && horaires[cours]) {
+                horaires[cours].forEach(function(horaire) {
+                    const option = document.createElement('option');
+                    option.value = horaire;
+                    option.textContent = horaire;
+                    horaireSelect.appendChild(option);
+                });
+            }
+        }
+
+        // Définir la date minimum à aujourd'hui
+        document.getElementById('date').min = new Date().toISOString().split('T')[0];
+    </script>
+</body>
+</html>

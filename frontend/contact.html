@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Gym Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+            <ul class="nav-links" id="navLinks">
+                <a href="Index.html"><h1>GYM MASTER</h1></a> 
+            </ul> 
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="cours.html">Cours</a></li>
+                <li><a href="tarifs.html">Tarifs</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Connexion</a></li>
+                <li><a href="registrer.html" class="btn-register">Inscription</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Contactez-Nous</h1>
+        <p>Nous sommes là pour répondre à toutes vos questions</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                
+                <!-- Formulaire de Contact -->
+                <div class="contact-form-container">
+                    <h2>Envoyez-nous un Message</h2>
+                    <form action="contact_process.php" method="POST" id="contactForm">
+                        
+                        <div class="form-group">
+                            <label for="nom">👤 Nom complet *</label>
+                            <input 
+                                type="text" 
+                                id="nom" 
+                                name="nom" 
+                                placeholder="Votre nom" 
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">📧 Email *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                placeholder="votre.email@exemple.com" 
+                                required
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telephone">📞 Téléphone</label>
+                            <input 
+                                type="tel" 
+                                id="telephone" 
+                                name="telephone" 
+                                placeholder="+32 XXX XX XX XX"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="sujet">📋 Sujet *</label>
+                            <select id="sujet" name="sujet" required>
+                                <option value="">Choisissez un sujet</option>
+                                <option value="information">Demande d'information</option>
+                                <option value="inscription">Inscription</option>
+                                <option value="tarifs">Question sur les tarifs</option>
+                                <option value="cours">Question sur les cours</option>
+                                <option value="reclamation">Réclamation</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">💬 Message *</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                rows="6" 
+                                placeholder="Votre message..." 
+                                required
+                            ></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="rgpd" required>
+                                <span>J'accepte que mes données soient utilisées pour me recontacter</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn-submit">Envoyer le Message</button>
+                    </form>
+                </div>
+
+                <!-- Informations de Contact -->
+                <div class="contact-info-container">
+                    <h2>Nos Coordonnées</h2>
+                    
+                    <div class="contact-info-card">
+                        <div class="contact-info-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <h3>Adresse</h3>
+                                <p>Avenue Louise 123<br>1050 Bruxelles<br>Belgique</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <span class="contact-icon">📞</span>
+                            <div>
+                                <h3>Téléphone</h3>
+                                <p>+32 2 123 45 67</p>
+                                <p>Lun-Ven: 9h-18h</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <span class="contact-icon">📧</span>
+                            <div>
+                                <h3>Email</h3>
+                                <p>contact@GymMaster.be</p>
+                                <p>Réponse sous 24h</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-info-item">
+                            <span class="contact-icon">⏰</span>
+                            <div>
+                                <h3>Horaires</h3>
+                                <p>Lun-Ven: 6h - 23h</p>
+                                <p>Sam-Dim: 8h - 21h</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-media">
+                        <h3>Suivez-nous</h3>
+                        <div class="social-buttons">
+                            <a href="#" class="social-btn">📘 Facebook</a>
+                            <a href="#" class="social-btn">📷 Instagram</a>
+                            <a href="#" class="social-btn">🐦 Twitter</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Où Nous Trouver</h2>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.1975846467843!2d4.360846315747!3d50.83736097952862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3c38449d8d64f%3A0x2d13a9834c02ba24!2sAvenue%20Louise%2C%20Bruxelles!5e0!3m2!1sfr!2sbe!4v1234567890"
+                    width="100%" 
+                    height="400" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Envie de Visiter ?</h2>
+            <p>Passez nous voir pour une visite guidée gratuite !</p>
+            <a href="registrer.html" class="btn-cta">Réserver une Visite</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GYM MASTER</h3>
+                    <p>Votre partenaire fitness depuis 2026</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="cours.html">Cours</a></li>
+                        <li><a href="tarifs.html">Tarifs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📧 contact@fitzone.be</p>
+                    <p>📞 +32 2 123 45 67</p>
+                    <p>📍 Avenue Louise 123, 1050 Bruxelles</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Horaires</h3>
+                    <p>Lun - Ven: 6h - 23h</p>
+                    <p>Sam - Dim: 8h - 21h</p>
+                    <p>Jours fériés: 9h - 18h</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+               <p>&copy; 2026 Gym Master - Tous droits réservés | TFE Projet</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

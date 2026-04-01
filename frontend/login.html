@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion - Gym Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+            <ul class="nav-links" id="navLinks">
+                <a href="Index.html"><h1>GYM MASTER</h1></a> 
+            </ul>   
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="cours.html">Cours</a></li>
+                <li><a href="tarifs.html">Tarifs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login active">Connexion</a></li>
+                <li><a href="registrer.html" class="btn-register">Inscription</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Formulaire de Connexion -->
+    <section class="login-section">
+        <div class="login-container">
+            <div class="login-box">
+                <h2>Connexion</h2>
+                <p class="login-subtitle">Connectez-vous à votre compte GymMaster</p>
+                
+                <form action="../backend/login.php" method="POST" id="loginForm">
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">📧 Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="votre.email@exemple.com" 
+                            required
+                        >
+                    </div>
+
+                    <!-- Mot de passe -->
+                    <div class="form-group">
+                        <label for="password">🔒 Mot de passe</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="Votre mot de passe" 
+                            required
+                        >
+                    </div>
+
+                    <!-- Se souvenir de moi -->
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="remember" id="remember">
+                            <span>Se souvenir de moi</span>
+                        </label>
+                        <a href="#" class="forgot-password">Mot de passe oublié ?</a>
+                    </div>
+
+                    <!-- Message d'erreur (caché par défaut) -->
+                    <div class="error-message" id="errorMessage" style="display: none;">
+                        ❌ Email ou mot de passe incorrect
+                    </div>
+
+                    <!-- Bouton de connexion -->
+                    <button type="submit" class="btn-submit">Se Connecter</button>
+                </form>
+
+                <!-- Lien vers inscription -->
+                <div class="login-footer">
+                    <p>Pas encore de compte ? <a href="registrer.html">Inscrivez-vous ici</a></p>
+                </div>
+
+                <!-- Ou séparateur -->
+                <div class="divider">
+                    <span>OU</span>
+                </div>
+
+                <!-- Connexion via réseaux sociaux (optionnel) -->
+                <div class="social-login">
+                    <button class="btn-social btn-google">
+                        <span>🔵</span> Continuer avec Google
+                    </button>
+                    <button class="btn-social btn-facebook">
+                        <span>📘</span> Continuer avec Facebook
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GYM MASTER</h3>
+                    <p>Votre partenaire fitness depuis 2026</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="cours.html">Cours</a></li>
+                        <li><a href="tarifs.html">Tarifs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📧 contact@GymMaster.be</p>
+                    <p>📞 +32 2 123 45 67</p>
+                    <p>📍 Avenue Louise 123, 1050 Bruxelles</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Horaires</h3>
+                    <p>Lun - Ven: 6h - 23h</p>
+                    <p>Sam - Dim: 8h - 21h</p>
+                    <p>Jours fériés: 9h - 18h</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+               <p>&copy; 2026 Gym Master - Tous droits réservés | TFE Projet</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarifs - Gym Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+            <ul class="nav-links" id="navLinks">
+                <a href="Index.html"><h1>GYM MASTER</h1></a> 
+            </ul> 
+            </div>
+            <ul class="nav-links" id="navLinks">€
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="cours.html">Cours</a></li>
+                <li><a href="tarifs.html" class="active">Tarifs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Connexion</a></li>
+                <li><a href="registrer.html" class="btn-register">Inscription</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Nos Tarifs</h1>
+        <p>Choisissez la formule qui vous convient le mieux</p>
+    </section>
+
+    <!-- Tarifs Section -->
+    <section class="tarifs-section">
+        <div class="container">
+            
+            <!-- Formule Mensuelle -->
+            <div class="tarif-card">
+                <div class="tarif-header">
+                    <h3>Mensuel</h3>
+                    <div class="tarif-price">
+                        <span class="price">19,99€</span>
+                        <span class="period">/ mois</span>
+                    </div>
+                </div>
+                <div class="tarif-features">
+                    <ul>
+                        <li>✓ Accès illimité à la salle</li>
+                        <li>✓ Tous les cours collectifs</li>
+                        <li>✓ Accès vestiaires & douches</li>
+                        <li>✓ 1 séance coaching offerte/mois</li>
+                        <li>✓ Sans engagement</li>
+                    </ul>
+                </div>
+                <button class="btn-subscribe">Choisir cette formule</button>
+                <p class="tarif-note">Parfait pour essayer !</p>
+            </div>
+
+            <!-- Formule Trimestrielle -->
+            <div class="tarif-card tarif-popular">
+                <div class="popular-badge">⭐ POPULAIRE</div>
+                <div class="tarif-header">
+                    <h3>Trimestriel</h3>
+                    <div class="tarif-price">
+                        <span class="price">49,99€</span>
+                        <span class="period">/ 3 mois</span>
+                    </div>
+                    <p class="economy">Économisez 10€</p>
+                </div>
+                <div class="tarif-features">
+                    <ul>
+                        <li>✓ Accès illimité à la salle</li>
+                        <li>✓ Tous les cours collectifs</li>
+                        <li>✓ Accès vestiaires & douches</li>
+                        <li>✓ 2 séances coaching offertes/mois</li>
+                        <li>✓ Programme personnalisé</li>
+                        <li>✓ Invitation aux événements spéciaux</li>
+                        <li>✓ Sans engagement</li>
+                    </ul>
+                </div>
+                <button class="btn-subscribe btn-subscribe-popular">Choisir cette formule</button>
+                <p class="tarif-note">Le meilleur rapport qualité/prix !</p>
+            </div>
+
+            <!-- Formule Annuelle -->
+            <div class="tarif-card">
+                <div class="tarif-header">
+                    <h3>Annuel</h3>
+                    <div class="tarif-price">
+                        <span class="price">239,99€</span>
+                        <span class="period">/ an</span>
+                    </div>
+                    <p class="economy">Économisez 100€</p>
+                </div>
+                <div class="tarif-features">
+                    <ul>
+                        <li>✓ Accès illimité à la salle</li>
+                        <li>✓ Tous les cours collectifs</li>
+                        <li>✓ Accès vestiaires & douches</li>
+                        <li>✓ Coaching illimité</li>
+                        <li>✓ Programme personnalisé</li>
+                        <li>✓ Suivi nutritionnel</li>
+                        <li>✓ Invitation VIP aux événements</li>
+                        <li>✓ 1 mois offert en cadeau</li>
+                    </ul>
+                </div>
+                <button class="btn-subscribe">Choisir cette formule</button>
+                <p class="tarif-note">Pour les plus motivés !</p>
+            </div>
+
+            <!-- Formule Étudiante -->
+            <div class="tarif-card tarif-special">
+                <div class="special-badge">🎓 ÉTUDIANT</div>
+                <div class="tarif-header">
+                    <h3>Étudiant</h3>
+                    <div class="tarif-price">
+                        <span class="price">15,99€</span>
+                        <span class="period">/ mois</span>
+                    </div>
+                    <p class="economy">Réduction -20%</p>
+                </div>
+                <div class="tarif-features">
+                    <ul>
+                        <li>✓ Accès illimité à la salle</li>
+                        <li>✓ Tous les cours collectifs</li>
+                        <li>✓ Accès vestiaires & douches</li>
+                        <li>✓ Carte étudiant requise</li>
+                        <li>✓ Sans engagement</li>
+                    </ul>
+                </div>
+                <button class="btn-subscribe">Choisir cette formule</button>
+                <p class="tarif-note">Sur présentation de la carte étudiant</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Section Comparaison -->
+    <section class="comparison-section">
+        <div class="container">
+            <h2 class="section-title">Comparez Nos Formules</h2>
+            <div class="comparison-table-container">
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th>Avantages</th>
+                            <th>Mensuel</th>
+                            <th>Trimestriel</th>
+                            <th>Annuel</th>
+                            <th>Étudiant</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Accès illimité</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Cours collectifs</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Séances coaching/mois</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>Illimité</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Programme personnalisé</td>
+                            <td>-</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Suivi nutritionnel</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>✓</td>
+                            <td>-</td>
+                        </tr>
+                        <tr>
+                            <td>Événements VIP</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>✓</td>
+                            <td>-</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Options Supplémentaires -->
+    <section class="options-section">
+        <div class="container">
+            <h2 class="section-title">Options Supplémentaires</h2>
+            <div class="options-grid">
+                <div class="option-card">
+                    <h3>🥤 Casier Personnel</h3>
+                    <p class="option-price">10€ / mois</p>
+                    <p>Sécurisez vos affaires dans un casier privé disponible 24/7</p>
+                </div>
+                <div class="option-card">
+                    <h3>👨‍🏫 Coaching Privé</h3>
+                    <p class="option-price">45€ / séance</p>
+                    <p>Séance individuelle avec un coach personnel certifié (1h)</p>
+                </div>
+                <div class="option-card">
+                    <h3>📊 Bilan Nutritionnel</h3>
+                    <p class="option-price">75€</p>
+                    <p>Consultation complète avec un nutritionniste diplômé</p>
+                </div>
+                <div class="option-card">
+                    <h3>🧴 Pack Bien-être</h3>
+                    <p class="option-price">15€ / mois</p>
+                    <p>Accès sauna, hammam et espace détente</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Questions Fréquentes</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <h3>❓ Puis-je annuler mon abonnement ?</h3>
+                    <p>Oui ! Nos formules mensuelles et trimestrielles sont sans engagement. Vous pouvez annuler à tout moment avec un préavis de 7 jours.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>❓ Y a-t-il une période d'essai ?</h3>
+                    <p>Oui ! Profitez d'une semaine gratuite pour tester nos installations et nos cours avant de vous engager.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>❓ Les cours sont-ils inclus ?</h3>
+                    <p>Absolument ! Tous nos cours collectifs (Yoga, Musculation, Cardio, Boxing, Zumba, Pilates) sont inclus dans votre abonnement.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>❓ Quels modes de paiement acceptez-vous ?</h3>
+                    <p>Nous acceptons les cartes bancaires, virements, PayPal et paiements en espèces à l'accueil.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Prêt à Commencer ?</h2>
+            <p>Inscrivez-vous aujourd'hui et bénéficiez de 1 semaine gratuite !</p>
+            <a href="registrer.html" class="btn-cta">Inscription Gratuite</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GYM MASTER</h3>
+                    <p>Votre partenaire fitness depuis 2026</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="cours.html">Cours</a></li>
+                        <li><a href="tarifs.html">Tarifs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📧 contact@GymMaster.be</p>
+                    <p>📞 +32 2 123 45 67</p>
+                    <p>📍 Avenue Louise 123, 1050 Bruxelles</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Horaires</h3>
+                    <p>Lun - Ven: 6h - 23h</p>
+                    <p>Sam - Dim: 8h - 21h</p>
+                    <p>Jours fériés: 9h - 18h</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 GYM MASTER - Tous droits réservés | TFE Projet</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

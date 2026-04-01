@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Gym Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+            <ul class="nav-links" id="navLinks">
+                <a href="Index.html"><h1>GYM MASTER</h1></a> 
+            </ul> 
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="cours.html">Cours</a></li>
+                <li><a href="tarifs.html">Tarifs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Connexion</a></li>
+                <li><a href="registrer.html" class="btn-register active">Inscription</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Formulaire d'Inscription -->
+    <section class="login-section">
+        <div class="login-container">
+            <div class="login-box">
+                <h2>Inscription</h2>
+                <p class="login-subtitle">Créez votre compte FitZone gratuitement</p>
+
+                <form action="../backend/registrer.php" method="POST" id="registerForm">
+
+                    <!-- Nom d'utilisateur -->
+                    <div class="form-group">
+                        <label for="username">👤 Nom d'utilisateur</label>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username" 
+                            placeholder="Votre nom d'utilisateur" 
+                            required
+                            minlength="3"
+                        >
+                    </div>
+
+                    <!-- Email -->
+                    <div class="form-group">
+                        <label for="email">📧 Email</label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email" 
+                            placeholder="votre.email@exemple.com" 
+                            required
+                        >
+                    </div>
+
+                    <!-- Mot de passe -->
+                    <div class="form-group">
+                        <label for="password">🔒 Mot de passe</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="Minimum 6 caractères" 
+                            required
+                            minlength="6"
+                        >
+                        <small>Le mot de passe doit contenir au moins 6 caractères</small>
+                    </div>
+
+                    <!-- Confirmation mot de passe -->
+                    <div class="form-group">
+                        <label for="confirm_password">🔒 Confirmer le mot de passe</label>
+                        <input 
+                            type="password" 
+                            id="confirm_password" 
+                            name="confirm_password" 
+                            placeholder="Confirmez votre mot de passe" 
+                            required
+                            minlength="6"
+                        >
+                    </div>
+
+                    <!-- Conditions générales -->
+                    <div class="form-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="terms" id="terms" required>
+                            <span>J'accepte les <a href="#">conditions générales</a></span>
+                        </label>
+                    </div>
+
+                    <!-- Messages d'erreur/succès -->
+                    <div class="error-message" id="errorMessage" style="display: none;">
+                        ❌ Une erreur s'est produite
+                    </div>
+                    <div class="success-message" id="successMessage" style="display: none;">
+                        ✅ Inscription réussie !
+                    </div>
+
+                    <!-- Bouton d'inscription -->
+                    <button type="submit" class="btn-submit">S'inscrire</button>
+                </form>
+
+                <!-- Lien vers connexion -->
+                <div class="login-footer">
+                    <p>Vous avez déjà un compte ? <a href="login.html">Connectez-vous ici</a></p>
+                </div>
+
+                <!-- Ou séparateur -->
+                <div class="divider">
+                    <span>OU</span>
+                </div>
+
+                <!-- Inscription via réseaux sociaux -->
+                <div class="social-login">
+                    <button class="btn-social btn-google" type="button">
+                        <span>🔵</span> S'inscrire avec Google
+                    </button>
+                    <button class="btn-social btn-facebook" type="button">
+                        <span>📘</span> S'inscrire avec Facebook
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>GYM MASTER</h3>
+                    <p>Votre partenaire fitness depuis 2026</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="cours.html">Cours</a></li>
+                        <li><a href="tarifs.html">Tarifs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📧 contact@GymMaster.be</p>
+                    <p>📞 +32 2 123 45 67</p>
+                    <p>📍 Avenue Louise 123, 1050 Bruxelles</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Horaires</h3>
+                    <p>Lun - Ven: 6h - 23h</p>
+                    <p>Sam - Dim: 8h - 21h</p>
+                    <p>Jours fériés: 9h - 18h</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gym Master - Tous droits réservés | TFE Projet</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Validation côté client pour les mots de passe
+        document.getElementById('registerForm').addEventListener('submit', function(e) {
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm_password').value;
+            const errorMessage = document.getElementById('errorMessage');
+            
+            if (password !== confirmPassword) {
+                e.preventDefault();
+                errorMessage.textContent = '❌ Les mots de passe ne correspondent pas';
+                errorMessage.style.display = 'block';
+                return false;
+            }
+        });
+    </script>
+</body>
+</html>

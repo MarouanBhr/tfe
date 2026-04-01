@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Cours - Gym Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+            <ul class="nav-links" id="navLinks">
+                <a href="Index.html"><h1>GYM MASTER</h1></a> 
+            </ul> 
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="cours.html" class="active">Cours</a></li>
+                <li><a href="tarifs.html">Tarifs</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="login.html" class="btn-login">Connexion</a></li>
+                <li><a href="registrer.html" class="btn-register">Inscription</a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <h1>Nos Cours</h1>
+        <p>Découvrez notre large gamme de cours adaptés à tous les niveaux</p>
+    </section>
+
+    <!-- Liste des Cours -->
+    <section class="cours-section">
+        <div class="container">
+            
+            <!-- Yoga -->
+            <div class="cours-card">
+                <div class="cours-icon">🧘</div>
+                <div class="cours-info">
+                    <h2>Yoga</h2>
+                    <p class="cours-description">Relaxation, souplesse et bien-être mental. Cours adapté à tous les niveaux pour améliorer votre posture et réduire le stress. Découvrez l'harmonie entre le corps et l'esprit.</p>
+                    <div class="cours-details">
+                        <span class="badge badge-beginner">Débutant</span>
+                        <span class="badge badge-inter">Intermédiaire</span>
+                    </div>
+                    <div class="horaires">
+                        <h4>📅 Horaires:</h4>
+                        <p>🕕 Lundi & Mercredi: 18h00 - 19h00</p>
+                        <p>🕙 Samedi: 10h00 - 11h30</p>
+                    </div>
+                    <p class="coach">👤 Coach: Sophie Dupont</p>
+                    <button class="btn-reserver" onclick="window.location.href='reservation.html'">Réserver ce cours</button>
+                </div>
+            </div>
+
+            <!-- Musculation -->
+            <div class="cours-card">
+                <div class="cours-icon">🏋️</div>
+                <div class="cours-info">
+                    <h2>Musculation</h2>
+                    <p class="cours-description">Développez votre masse musculaire et votre force avec un programme personnalisé. Accès libre aux équipements et coaching sur demande. Matériel professionnel et encadrement expert.</p>
+                    <div class="cours-details">
+                        <span class="badge badge-all">Tous niveaux</span>
+                    </div>
+                    <div class="horaires">
+                        <h4>📅 Horaires:</h4>
+                        <p>🕔 Mardi & Jeudi: 17h00 - 18h30</p>
+                        <p>🕖 Vendredi: 19h00 - 20h30</p>
+                        <p>🔓 Accès libre: Tous les jours 6h-23h</p>
+                    </div>
+                    <p class="coach">👤 Coach: Marc Leroy</p>
+                    <button class="btn-reserver">Réserver ce cours</button>
+                </div>
+            </div>
+
+            <!-- Cardio Training -->
+            <div class="cours-card">
+                <div class="cours-icon">🏃</div>
+                <div class="cours-info">
+                    <h2>Cardio Training</h2>
+                    <p class="cours-description">Entraînement cardiovasculaire intensif pour améliorer votre endurance et brûler un maximum de calories. Vélo, tapis de course, elliptique et rameur disponibles.</p>
+                    <div class="cours-details">
+                        <span class="badge badge-inter">Intermédiaire</span>
+                        <span class="badge badge-advanced">Avancé</span>
+                    </div>
+                    <div class="horaires">
+                        <h4>📅 Horaires:</h4>
+                        <p>🕖 Lundi, Mercredi, Vendredi: 19h00 - 20h00</p>
+                        <p>🕘 Samedi: 9h00 - 10h00</p>
+                    </div>
+                    <p class="coach">👤 Coach: Julie Martin</p>
+                    <button class="btn-reserver">Réserver ce cours</button>
+                </div>
+            </div>
+
+            <!-- Pilates -->
+            <div class="cours-card">
+                <div class="cours-icon">🤸</div>
+                <div class="cours-info">
+                    <h2>Pilates</h2>
+                    <p class="cours-description">Renforcement musculaire en douceur axé sur la posture, l'équilibre et la flexibilité. Parfait pour le gainage et le bien-être du dos. Méthode douce mais efficace.</p>
+                    <div class="cours-details">
+                        <span class="badge badge-beginner">Débutant</span>
+                        <span class="badge badge-inter">Intermédiaire</span>
+                    </div>
+                    <div class="horaires">
+                        <h4>📅 Horaires:</h4>
+                        <p>🕕 Mardi & Jeudi: 18h30 - 19h30</p>
+                        <p>🕙 Samedi: 10h00 - 11h00</p>
+                    </div>
+                    <p class="coach">👤 Coach: Emma Dubois</p>
+                    <button class="btn-reserver">Réserver ce cours</button>
+                </div>
+            </div>
+
+            <!-- Boxing -->
+            <div class="cours-card">
+                <div class="cours-icon">🥊</div>
+                <div class="cours-info">
+                    <h2>Boxing & Fitness Combat</h2>
+                    <p class="cours-description">Entraînement haute intensité combinant techniques de boxe et cardio. Excellent pour se défouler et sculpter son corps. Développez force, rapidité et confiance.</p>
+                    <div class="cours-details">
+                        <span class="badge badge-all">Tous niveaux</span>
+                        <span class="badge badge-intense">Intensif</span>
+                    </div>
+                    <div class="horaires">
+                        <h4>📅 Horaires:</h4>
+                        <p>🕗 Lundi & Mercredi: 20h00 - 21h00</p>
+                        <p>🕕 Vendredi: 18h00 - 19h00</p>
+                    </div>
+                    <p class="coach">👤 Coach: Thomas Renard</p>
+                    <button class="btn-reserver">Réserver ce cours</button>
+                </div>
+            </div>
+
+            <!-- Zumba -->
+            <div class="cours-card">
+                <div class="cours-icon">💃</div>
+                <div class="cours-info">
+                    <h2>Zumba</h2>
+                    <p class="cours-description">Danse fitness sur des rythmes latino. Brûlez des calories en vous amusant dans une ambiance festive et conviviale. Pas besoin de savoir danser, juste de l'énergie !</p>
+                    <div class="cours-details">
+                        <span class="badge badge-beginner">Débutant</span>
+                        <span class="badge badge-fun">Fun</span>
+                    </div>
+                    <div class="horaires">
+                        <h4>📅 Horaires:</h4>
+                        <p>🕖 Mardi: 19h00 - 20h00</p>
+                        <p>🕕 Jeudi: 18h00 - 19h00</p>
+                        <p>🕚 Dimanche: 11h00 - 12h00</p>
+                    </div>
+                    <p class="coach">👤 Coach: Laura Santos</p>
+                    <button class="btn-reserver">Réserver ce cours</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Envie d'Essayer ?</h2>
+            <p>Inscrivez-vous maintenant et profitez d'une séance d'essai gratuite !</p>
+            <a href="registrer.html" class="btn-cta">Je M'inscris</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Gym Master</h3>
+                    <p>Votre partenaire fitness depuis 2026</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="cours.html">Cours</a></li>
+                        <li><a href="tarifs.html">Tarifs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>📧 contact@GymMaster.be</p>
+                    <p>📞 +32 2 123 45 67</p>
+                    <p>📍 Avenue Louise 123, 1050 Bruxelles</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Horaires</h3>
+                    <p>Lun - Ven: 6h - 23h</p>
+                    <p>Sam - Dim: 8h - 21h</p>
+                    <p>Jours fériés: 9h - 18h</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gym Master - Tous droits réservés | TFE Projet</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
